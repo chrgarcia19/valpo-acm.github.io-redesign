@@ -1,0 +1,40 @@
+{
+    "members": [
+        {
+            "position": "President",
+            "name": "Ethan Hawk",
+            "major": ["Computer Science", "Data Science"],
+            "git": "https://github.com/ehawkvu"
+        },
+        {
+            "position": "Vice President",
+            "name": "Nathan Harmon",
+            "major": ["Computer Science"],
+            "git": "https://gitlab.com/nathanharmon"
+        },
+        {
+            "position": "Secretary",
+            "name": "Nick Koeppen",
+            "major": ["Computer Science"],
+            "git": "https://github.com/nakoeppen"
+        },
+        {
+            "position": "Treasurer",
+            "name": "Spencer Gannon",
+            "major": ["Computer Science", "Math"],
+            "git": "https://github.com/s-gannon"
+        },
+        {
+            "position": "Public Relations Coordinator",
+            "name": "Kurt Brown",
+            "major": ["Data Science", "Computer Science"],
+            "git": "https://github.com/kbro4"
+        },
+        {
+            "position": "Advisor",
+            "name": "Prof Nick Rosasco",
+            "major": [],
+            "git": "https://github.com/nsrosasco"
+        }
+    ]
+}

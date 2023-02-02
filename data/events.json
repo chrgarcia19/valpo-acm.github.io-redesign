@@ -1,0 +1,45 @@
+{
+    "term": "Spring 2023",
+    "events": [
+        {
+            "title": "Internship & Resume Night",
+            "location": "GEM 125",
+            "datetime": "2023-02-06 18:00:00 -0600"
+        },
+        {
+            "title": "Office Job Survival Guide",
+            "location": "GEM 125",
+            "datetime": "2023-02-20 18:00:00 -0600"
+        },
+        {
+            "title": "Git & GitHub Night",
+            "location": "GEM 125",
+            "datetime": "2023-02-27 18:00:00 -0600"
+        },
+        {
+            "title": "Electives Night",
+            "location": "GEM 125",
+            "datetime": "2023-03-20 18:00:00 -0600"
+        },
+        {
+            "title": "Hacking Night",
+            "location": "GEM 125",
+            "datetime": "2023-04-03 18:00:00 -0600"
+        },
+        {
+            "title": "Operating System Architecture Night",
+            "location": "GEM 125",
+            "datetime": "2023-04-17 18:00:00 -0600"
+        },
+        {
+            "title": "CS Trivia Night",
+            "location": "GEM 125",
+            "datetime": "2023-04-24 18:00:00 -0600"
+        },
+        {
+            "title": "Code Golf",
+            "location": "GEM 125",
+            "datetime": "2023-05-01 18:00:00 -0600"
+        }
+    ]
+}

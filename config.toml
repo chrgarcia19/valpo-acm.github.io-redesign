@@ -1,0 +1,9 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Valpo ACM Website"
+copyright = "Valparaiso University ACM Chapter"
+disableHugoGenerateInject = true
+enableRobotsTXT = true
+
+[Taxonomies]
+
