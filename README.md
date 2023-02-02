@@ -22,5 +22,5 @@ Run `hugo server` and navigate to `localhost:1313` to view the development websi
 
 ### How do I publish a website revision?
 
-Commit to the `master` branch. GitHub will automatically run Hugo to generate the website.
+Commit to the `master` branch. A GitHub Action will automatically run Hugo to generate and deploy the website.
 
