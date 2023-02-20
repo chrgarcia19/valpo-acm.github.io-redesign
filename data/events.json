@@ -9,7 +9,8 @@
         {
             "title": "Office Job Survival Guide",
             "location": "GEM 125",
-            "datetime": "2023-02-20 18:00:00 -0600"
+            "datetime": "2023-02-20 18:00:00 -0600",
+            "slides": "https://docs.google.com/presentation/d/1J-ai90mHnHQvudjsSsvS30x7mFTcCIDhqFTSFFbSqt8/edit"
         },
         {
             "title": "Git & GitHub Night",
