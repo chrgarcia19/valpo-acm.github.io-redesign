@@ -3,7 +3,7 @@
     
     <div>
     {{ range .Site.Data.events.events }}
-    <p id="{{ .title | urlize }}">{{ .title }}<br>&#128339; <time datetime="{{ .datetime | time.Format "2006-01-02 03:04" }}">{{ .datetime | time.Format "Jan 2 @ 3:04 pm" }}</time> &#127758; {{ .location }}</p>
+    <p id="{{ .title | urlize }}">{{ .title }}{{ if isset . "slides" }} <a href="{{ .slides }}">&#128194;</a>{{ end }}<br>&#128339; <time datetime="{{ .datetime | time.Format "2006-01-02 03:04" }}">{{ .datetime | time.Format "Jan 2 @ 3:04 pm" }}</time> &#127758; {{ .location }}</p>
     {{ end }}
     </div>
 </section>
