@@ -8,6 +8,12 @@ A website for the Valparaiso University Chapter of the Association for Computing
 
 Edit `data/eboard.json` with the appropriate information. Profile photos should be placed in `static/eboard/` in the format `firstname-lastname.webp` to be automatically found.
 
+You can convert an image to .webp by using cwebp:
+
+```
+cwebp -q 75 intput_file.png -o output_file.webp
+```
+
 ### How to update ACM events?
 
 Edit `data/events.json` with the semester's events.
