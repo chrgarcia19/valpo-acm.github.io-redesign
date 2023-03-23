@@ -11,7 +11,7 @@ Edit `data/eboard.json` with the appropriate information. Profile photos should 
 You can convert an image to .webp by using cwebp:
 
 ```
-cwebp -q 75 intput_file.png -o output_file.webp
+cwebp -q 75 input_file.png -o output_file.webp
 ```
 
 ### How to update ACM events?
