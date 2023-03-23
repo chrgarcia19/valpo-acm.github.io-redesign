@@ -4,20 +4,12 @@ body {
 }
 
 header {
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 50px;
-
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 15px;
 }
 
-h1 {
-    font-family: sans-serif;
-    font-weight: lighter;
-    color: #613318;
+header img {
+    width: 350px;
 }
 
 h2 {
