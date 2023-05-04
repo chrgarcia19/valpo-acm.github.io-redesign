@@ -16,7 +16,7 @@ cwebp -q 75 input_file.png -o output_file.webp
 
 ### How to update ACM events?
 
-Edit `data/events.json` with the semester's events.
+Edit `data/events.json` with the semester's events. Note: the `slides` url is optional.
 
 ### How to update the constitution?
 

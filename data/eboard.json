@@ -1,34 +1,46 @@
 {
     "members": [
         {
-            "position": "President",
-            "name": "Ethan Hawk",
-            "major": ["Computer Science", "Data Science"],
-            "git": "https://github.com/ehawkvu"
-        },
-        {
-            "position": "Vice President",
-            "name": "Nathan Harmon",
-            "major": ["Computer Science"],
-            "git": "https://gitlab.com/nathanharmon"
-        },
-        {
-            "position": "Secretary",
+            "position": "Co-President",
             "name": "Nick Koeppen",
             "major": ["Computer Science"],
             "git": "https://github.com/nakoeppen"
         },
         {
-            "position": "Treasurer",
+            "position": "Co-President",
+            "name": "Christian Garcia",
+            "major": ["Computer Science"],
+            "git": "https://github.com/chrgarcia19"
+        },
+        {
+            "position": "Vice-President",
             "name": "Spencer Gannon",
             "major": ["Computer Science", "Math"],
             "git": "https://github.com/s-gannon"
         },
         {
+            "position": "Secretary",
+            "name": "Mason Tulacz",
+            "major": ["Computer Science"],
+            "git": "https://github.com/valkrie935"
+        },
+        {
+            "position": "Treasurer",
+            "name": "Santiago Gutierrez",
+            "major": ["Computer Science"],
+            "git": "https://github.com/santiagoguty"
+        },
+        {
             "position": "Public Relations Coordinator",
             "name": "Kurt Brown",
-            "major": ["Data Science", "Computer Science"],
+            "major": ["Computer Science"],
             "git": "https://github.com/kbro4"
+        },
+        {
+            "position": "Webmaster",
+            "name": "Aubry Kranz",
+            "major": ["Computer Science"],
+            "git": "https://github.com/airralin"
         },
         {
             "position": "Advisor",
