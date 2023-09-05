@@ -7,41 +7,41 @@
             "datetime": "2023-08-28 19:00:00 -0600"
         },
         {
-            "title": "Office Job Survival Guide",
+            "title": "Grad School Night",
             "location": "GEM 125",
-            "datetime": "2023-02-20 19:00:00 -0600",
+            "datetime": "2023-09-06 18:00:00 -0600",
             "slides": "https://docs.google.com/presentation/d/1J-ai90mHnHQvudjsSsvS30x7mFTcCIDhqFTSFFbSqt8"
         },
         {
-            "title": "Git & GitHub Night",
+            "title": "Resume Night",
             "location": "GEM 125",
-            "datetime": "2023-02-27 19:00:00 -0600",
+            "datetime": "2023-09-18 18:00:00 -0600",
             "slides": "https://docs.google.com/presentation/d/13OlrUt1dg6t7ac-CLtclvIHwX86piBT69Q7bTbYryDU"
+        },
+        {
+            "title": "???",
+            "location": "GEM 125",
+            "datetime": "2023-10-02 18:00:00 -0600"
         },
         {
             "title": "Electives Night",
             "location": "GEM 125",
-            "datetime": "2023-03-20 19:00:00 -0600"
+            "datetime": "2023-10-16 18:00:00 -0600"
         },
         {
-            "title": "Hacking Night",
+            "title": "Linux Night",
             "location": "GEM 125",
-            "datetime": "2023-04-03 19:00:00 -0600"
+            "datetime": "2023-10-30 18:00:00 -0600"
         },
         {
-            "title": "Operating System Architecture Night",
+            "title": "Security Night",
             "location": "GEM 125",
-            "datetime": "2023-04-17 19:00:00 -0600"
+            "datetime": "2023-11-13 18:00:00 -0600"
         },
         {
-            "title": "CS Trivia Night",
+            "title": "Trivia Night",
             "location": "GEM 125",
-            "datetime": "2023-04-24 19:00:00 -0600"
-        },
-        {
-            "title": "Code Golf",
-            "location": "GEM 125",
-            "datetime": "2023-05-01 19:00:00 -0600"
+            "datetime": "2023-12-04 18:00:00 -0600"
         }
     ]
 }
