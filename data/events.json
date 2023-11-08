@@ -9,7 +9,8 @@
         {
             "title": "Grad School Night",
             "location": "GEM 224",
-            "datetime": "2023-09-06 17:00:00 -0600"
+            "datetime": "2023-09-06 17:00:00 -0600",
+	        "slides": "https://drive.google.com/drive/folders/0Bztk04xZxxu_MVgxSldCZGxmaGM?resourcekey=0-0nxzuBrMB1Qwugdtbx1nOg&usp=drive_link"
         },
         {
             "title": "Resume Night",
@@ -19,7 +20,8 @@
         {
             "title": "ACM Colloquium",
             "location": "GEM 124",
-            "datetime": "2023-10-02 18:00:00 -0600"
+            "datetime": "2023-10-02 18:00:00 -0600",
+	        "slides": "https://docs.google.com/document/d/1rMPWHujnR7A5xfSzta7AVZgoCKXRY0Pq64_nU003NJY/edit?usp=sharing" 
         },
         {
             "title": "Electives Night",
@@ -44,3 +46,4 @@
         }
     ]
 }
+
