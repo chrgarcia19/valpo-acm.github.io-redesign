@@ -1,13 +1,7 @@
 {
     "members": [
         {
-            "position": "Co-President",
-            "name": "Nicholas Koeppen",
-            "major": ["Computer Science"],
-            "git": "https://github.com/nakoeppen"
-        },
-        {
-            "position": "Co-President",
+            "position": "President",
             "name": "Christian Garcia",
             "major": ["Computer Science"],
             "git": "https://github.com/chrgarcia19"

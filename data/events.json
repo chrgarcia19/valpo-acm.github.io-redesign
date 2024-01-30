@@ -2,37 +2,36 @@
     "term": "Fall 2023",
     "events": [
         {
-            "title": "ACM Meet & Greet",
-            "location": "Meier Hall Courtyard (Meier Hall 134 if raining)",
-            "datetime": "2023-08-28 19:00:00 -0600"
+            "title": "Your Online Profile and You",
+            "location": "GEM 125",
+            "datetime": "2024-01-29 18:00:00 -0600",
+			"slides": "https://docs.google.com/presentation/d/129vWVStgQbemqgfSIsu7Fg5Tdke64IN7xGnMb2-4BfI/edit?usp=sharing"
         },
         {
-            "title": "Grad School Night",
-            "location": "GEM 224",
-            "datetime": "2023-09-06 17:00:00 -0600",
-	        "slides": "https://drive.google.com/drive/folders/0Bztk04xZxxu_MVgxSldCZGxmaGM?resourcekey=0-0nxzuBrMB1Qwugdtbx1nOg&usp=drive_link"
-        },
-        {
-            "title": "Resume Night",
-            "location": "GEM 124",
-            "datetime": "2023-09-18 18:00:00 -0600"
-        },
-        {
-            "title": "ACM Colloquium",
-            "location": "GEM 124",
-            "datetime": "2023-10-02 18:00:00 -0600",
-	        "slides": "https://docs.google.com/document/d/1rMPWHujnR7A5xfSzta7AVZgoCKXRY0Pq64_nU003NJY/edit?usp=sharing" 
+            "title": "Talk with Prof. Venstrom on Modeling",
+            "location": "GEM 125",
+            "datetime": "2024-02-12 19:00:00 -0600",
+	        
         },
         {
             "title": "Electives Night",
-            "location": "GEM 124",
-            "datetime": "2023-10-16 18:00:00 -0600"
+            "location": "GEM 125",
+            "datetime": "2024-02-26 18:00:00 -0600"
         },
         {
-            "title": "Linux Night",
+            "title": "IEEE Presents: Talk with Drew Simmons about Bungie and Gaming",
             "location": "GEM 124",
-            "datetime": "2023-10-30 19:00:00 -0600",
-	    "slides": "https://docs.google.com/presentation/d/1SvTUc3ETwUf1S2SUPPDFYVfPeSVdXjNyQ0vUHQp40ZU/edit?usp=sharing"
+            "datetime": "2024-03-21 19:00:00 -0600"
+        },
+        {
+            "title": "Talk with Profs. Catisti and Bognar on Music and AI",
+            "location": "GEM 124",
+            "datetime": "2023-04-15 18:00:00 -0600"
+        },
+        {
+            "title": "Code Golf",
+            "location": "GEM 124",
+            "datetime": "2023-04-16 18:00:00 -0600"
         },
         {
             "title": "Security Night",
