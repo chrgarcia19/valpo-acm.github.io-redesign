@@ -35,7 +35,8 @@
         },
         {
             "title": "Tech Tour",
-            "location": "TBD"
+            "location": "TBD",
+            "datetime": "2024-01-01 00:00:00 -0600"
         }
     ]
 }
