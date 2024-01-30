@@ -4,7 +4,7 @@
         {
             "title": "Your Online Profile and You",
             "location": "GEM 125",
-            "datetime": "2024-01-29 18:00:00 -0600",
+            "datetime": "2024-01-29 18:00:00 -0600"
         },
         {
             "title": "Talk with Prof. Venstrom on Modeling",
@@ -31,6 +31,11 @@
             "title": "Code Golf",
             "location": "GEM 124",
             "datetime": "2023-04-16 18:00:00 -0600"
+        },
+		{
+            "title": "Tech Tour",
+            "location": "TBD",
+            "datetime": "TBD"
         }
     ]
 }
