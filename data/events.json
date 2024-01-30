@@ -4,7 +4,8 @@
         {
             "title": "Your Online Profile and You",
             "location": "GEM 125",
-            "datetime": "2024-01-29 18:00:00 -0600"
+            "datetime": "2024-01-29 18:00:00 -0600",
+            "slides": "https://docs.google.com/presentation/d/129vWVStgQbemqgfSIsu7Fg5Tdke64IN7xGnMb2-4BfI/edit?usp=sharing"
         },
         {
             "title": "Talk with Prof. Venstrom on Modeling",
@@ -19,19 +20,23 @@
         },
         {
             "title": "IEEE Presents: Talk with Drew Simmons about Bungie and Gaming",
-            "location": "GEM 124",
+            "location": "GEM 137",
             "datetime": "2024-03-21 19:00:00 -0600"
         },
         {
             "title": "Talk with Profs. Catisti and Bognar on Music and AI",
-            "location": "GEM 124",
-            "datetime": "2023-04-15 18:00:00 -0600"
+            "location": "TBD",
+            "datetime": "2024-04-15 18:00:00 -0600"
         },
         {
             "title": "Code Golf",
-            "location": "GEM 124",
-            "datetime": "2023-04-16 18:00:00 -0600"
+            "location": "GEM 125",
+            "datetime": "2024-04-16 18:00:00 -0600"
         },
+        {
+            "title": "Tech Tour",
+            "location": "TBD"
+        }
     ]
 }
 
