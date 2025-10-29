@@ -1,15 +1,8 @@
 <section id="eboard">
     <h2>Valpo ACM E-Board Members</h2>
-    <div id="eboard-cards">
+    <div id="card-container">
         {{ range .Site.Data.eboard.members }}
-        <div class="eboard-card" id="eboard-{{ .position | urlize }}">
-            <img src="eboard/{{ .name | urlize }}.webp" alt="Profile photo of {{ .name }}" width="200px"/>
-            <h3>{{ .position}}<br>{{ .name }}</h3>
-            {{ if gt (len .major) 0 }}
-            <p>Major{{ if gt (len .major) 1 }}s{{ end }}: {{ delimit .major " & " }}</p>
-            {{ end }}
-            <p><a target="_blank" href="{{ .git }}">Git Profile</a></p>
-        </div>
+            {{ partial "eboard-card.html" . }}
         {{ end }}
     </div>
 </section>
