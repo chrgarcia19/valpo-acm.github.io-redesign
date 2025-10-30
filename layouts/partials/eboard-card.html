@@ -1,26 +1,36 @@
 <div class="eboard-card" id="eboard-{{ .position | urlize }}">
-    <img src="eboard/{{ .name | urlize }}.webp" alt="Profile photo of {{ .name }}" width="200px"/>
-    <h3 class="important-info-container">
-        <div class="position">
-            {{ .position  }}
+    <div class="photos">
+        <img id="eboard-photo" src="eboard/{{ .name | urlize }}.webp" alt="Profile photo of {{ .name }}"/>
+    </div>
+    <div class="info">
+        <h3 class="roleandname">
+            <div class="position">
+                {{ .position  }}
+            </div>
+            <div class="name">
+                {{ .name }}
+            </div>
+        </h3>
+
+        {{ if gt (len .major) 0 }}
+            <p>Major{{ if gt (len .major) 1 }}s{{ end }}: {{ delimit .major " & " }}</p>
+        {{ end }}
+
+        <div class="social-links">
+            {{ if .git }}
+            <a target="_blank" href="{{ .git }}">
+                <button class="social-button" id="github">
+                    <i class="bi bi-github"></i>
+                </button>
+            </a>
+            {{ end }}
+            {{ if .linkedin }}
+            <a target="_blank" href="{{ .linkedin }}">
+                <button class="social-button" id="linkedin">
+                    <i class="bi bi-linkedin"></i>
+                </button>
+            </a>
+            {{ end }}
         </div>
-        {{ .name }}
-    </h3>
-
-    {{ if gt (len .major) 0 }}
-        <p>Major{{ if gt (len .major) 1 }}s{{ end }}: {{ delimit .major " & " }}</p>
-    {{ end }}
-
-    <div class="socials-links">
-        {{ if .git }}
-        <a target="_blank" href="{{ .git }}">
-            <button class="social-button">
-                <i class="bi bi-github"></i>
-            </button>
-        </a>
-        {{ end }}
-        {{ if .linkedin }}
-        <a target="_blank" href="{{ .linkedin }}">LinkedIn</a>
-        {{ end }}
     </div>
 </div>

@@ -43,9 +43,12 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 300px;
     border-radius: 15px;
     background-color: rgb(131, 206, 226);
-    padding: 25px
+    padding: 10px;
+    min-height: max-content;
 }
 
 h3 {
@@ -80,7 +83,7 @@ h3 {
     align-items: center;
 }
 
-#image {
+#acmlogo {
     width: 150px;
     height: auto;
     padding: 10px;
@@ -106,23 +109,79 @@ ul {
     margin-right: 30px;
 }
 
+.name {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: larger;
+}
+
 .position {
     display: flex;
     justify-content: center;
-    font-size: x-large ;
+    flex-wrap: wrap;
+    font-size: xx-large;
+    text-decoration: underline;
 }
 
-.important-info-container {
+.roleandname {
     display: flex;
     flex-direction: column;
 }
 
-.social-button {
+.photos {
     display: flex;
-    width: 40px;
-    height: 40px;
+    justify-self: center;
+    align-items: center;
+    height: 60%;
+    padding-top: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+.social-button {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     font-size: 24px;
+    cursor: pointer;
+    border: none;
+    transition: background 2ms;
+}
+
+#github.social-button {
+    background-color: #d0d7de;
+}
+
+#github.social-button:hover {
+    background-color: #8c959f;
+}
+
+#linkedin.social-button {
+    background-color: #68C7EC;
+}
+
+#linkedin.social-button:hover {
+    background-color: #34B3E4;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+
+#eboard-photo {
+    width: 250px;
+    height: auto;
+    border: 1px solid black;
 }
