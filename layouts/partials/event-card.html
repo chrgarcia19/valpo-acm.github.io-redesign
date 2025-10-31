@@ -1,0 +1,49 @@
+<div class="event-card" id="event-{{ .title | urlize }}">
+    {{ if and .subtitle .title }}
+        <div class="title">
+            
+            <h3 class="event-title" id="{{ .title | urlize }}">
+                {{ .index}})
+                <span style="text-decoration: underline;">{{ .title }}</span>
+            </h3>
+            <h4 class="event-subtitle" id="{{ .subtitle | urlize }}">
+                {{ .subtitle }}
+            </h4>
+        </div>
+        <div class="event-info has-subtitle">
+    {{ else }}
+        <div class="title">
+            <h3 class="event-title" id="{{ .title | urlize }}">
+                {{ .index}})
+                <span style="text-decoration: underline;">{{ .title }}</span>
+            </h3>
+        </div>
+        <div class="event-info">
+    {{ end }}
+            <p class="datetimelocal">
+                <i class="bi bi-calendar2"></i>
+                {{ .date }}
+            </p>
+            <p class="datetimelocal">
+                <i class="bi bi-clock"></i>
+                {{ .time }}
+            </p>
+            <p class="datetimelocal">
+                <i class="bi bi-geo-alt-fill"></i>
+                {{ .location }}
+            </p>
+        </div>
+    {{ if isset . "description" }}
+        <div class="description">
+            <p style="font-weight: bold; padding-top: 20px; margin: 0;">Event Description: </p>
+            <p style="padding: 5px 0; margin: 0;">{{ .description }}</p>        
+        </div>
+    {{ end }}
+    {{ if .slides }} 
+        <a target="_blank" href="{{ .slides }}">
+            <button id="materials">
+                <i class="bi bi-folder"></i>
+            </button>
+        </a>
+    {{ end }}
+</div>

@@ -1,9 +1,9 @@
 <section id="events">
     <h2>{{ .Site.Data.events.term }} Events</h2>
     
-    <div>
-    {{ range .Site.Data.events.events }}
-    <p id="{{ .title | urlize }}">{{ .title }}{{ if isset . "slides" }} <a target="_blank" href="{{ .slides }}">&#128194;</a>{{ end }}<br>&#128339; <time datetime="{{ .datetime | time.Format "2006-01-02 03:04" }}">{{ .datetime | time.Format "Jan 2 @ 3:04 pm" }}</time> &#127758; {{ .location }}</p>
-    {{ end }}
+    <div class="events">
+        {{ range $index, $event := .Site.Data.events.events }}
+            {{ partial "event-card.html" (merge $event (dict "index" (add $index 1))) }}
+        {{ end }}
     </div>
 </section>
