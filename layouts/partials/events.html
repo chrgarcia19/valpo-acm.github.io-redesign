@@ -3,7 +3,7 @@
     
     <div class="events">
         {{ range $index, $event := .Site.Data.events.events }}
-            {{ partial "event-card.html" (merge $event (dict "index" (add $index 1))) }}
+            {{ partial "event-card.html" (merge $event (dict "index" (add $index 1) "term" $.Site.Data.events.term)) }}
         {{ end }}
     </div>
 </section>

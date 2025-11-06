@@ -171,6 +171,16 @@ button {
     background-color: rgb(139, 138, 138);
 }
 
+#calendar {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(182, 180, 180);
+}
+
+#calendar:hover {
+    background-color: rgb(139, 138, 138);
+}
+
 .social-links {
     display: flex;
     flex-direction: row;
@@ -208,6 +218,17 @@ button {
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.event-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 5px;
+    right: 10px;
 }
 
 @media (max-width: 450px) {
