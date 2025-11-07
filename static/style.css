@@ -307,3 +307,56 @@ button {
     top: 10px; 
     text-decoration: underline;
 }
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 75px;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    background-color: rgb(131, 206, 226);
+    padding: 10px;
+    height: 100%;
+    gap: 25px;
+}
+
+#project-photo {
+    width: 300px;
+    height: auto;
+}
+
+.project-name {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+#contributor-header {
+    display: flex;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.contributors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

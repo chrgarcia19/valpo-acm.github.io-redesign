@@ -1,0 +1,28 @@
+<div class="project-card" id="project-{{ .title | urlize }}">
+    <div style="display: flex; align-items: flex-start; justify-content: flex-start; margin: 0; padding: 0;">
+        <img id="project-photo" src="projects/{{ .title | urlize }}.png" alt="Photo of the {{ .name }} project" />
+    </div>
+    <div class="project-info">
+        <h3 class="project-name">
+            {{ .title }}
+        </h3>
+        <span id="contributor-header">
+            Contributors:
+        </span>
+        <div class="contributors">
+            {{ range $index, $contributor := .contributors }}
+                {{ if lt (add $index 1) (len $.contributors) }}
+                    {{ .name }},
+                {{ else }}
+                    {{ .name }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="description">
+            <span id="contributor-header">
+                Project Description:
+            </span>
+            {{ .description }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<section id="projects">
+    <h2>Our Projects</h2>
+
+    <div class="project-container">
+        {{ range .Site.Data.projects.projects }}
+            {{ partial "project-card.html" . }}
+        {{ end }}
+    </div>
+</section>

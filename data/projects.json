@@ -1,0 +1,32 @@
+{
+    "projects": [
+        {
+            "title": "Valpo ACM Game",
+            "contributors": [
+                {
+                    "name": "Eric Yager"
+                },
+                {
+                    "name": "Ethan Hawk"
+                },
+                {
+                    "name": "Nathan Harmon"
+                },
+                {
+                    "name": "Alex Luke"
+                },
+                {
+                    "name": "Spencer Gannon"
+                },
+                {
+                    "name": "Matthew Spivey"
+                },
+                {
+                    "name": "Jace Nowacki"
+                }
+            ],
+            "description": "A simplistic top-down shooter game based on retro games like Space Invaders.",
+            "github": "https://github.com/valpo-acm/valpo-acm-game"
+        }
+    ]
+}
