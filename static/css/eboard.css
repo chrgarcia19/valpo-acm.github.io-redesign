@@ -1,0 +1,125 @@
+#card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 75px;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 640px) {
+    #card-container {
+        grid-template-columns: auto;
+    }
+}
+
+.eboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    background-color: rgb(131, 206, 226);
+    padding: 10px;
+    min-height: max-content;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: larger;
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.roleandname {
+    display: flex;
+    flex-direction: column;
+}
+
+.photos {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 60%;
+    padding-top: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+}
+
+button {
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    transition: background 2ms;
+}
+
+#github {
+    background-color: #d0d7de;
+}
+
+#github:hover {
+    background-color: #8c959f;
+}
+
+#linkedin {
+    background-color: #68C7EC;
+}
+
+#linkedin:hover {
+    background-color: #34B3E4;
+}
+
+#materials {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(182, 180, 180);
+}
+
+#materials:hover {
+    background-color: rgb(139, 138, 138);
+}
+
+#calendar {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(182, 180, 180);
+}
+
+#calendar:hover {
+    background-color: rgb(139, 138, 138);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+}
+
+#eboard-photo {
+    width: 250px;
+    height: auto;
+    border: 1px solid black;
+}
+
