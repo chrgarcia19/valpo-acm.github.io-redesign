@@ -1,0 +1,52 @@
+.mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 100px;
+}
+
+.mission-statement {
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 100px;
+    
+}
+
+.activity-card {
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 25px;
+    max-width: 500px;
+}
+
+.activity-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+#instagram {
+    background-color: #FFDC80;
+}
+
+#instagram:hover {
+    background-image: linear-gradient(to top right, #FFDC80, #F77737, #E1306C, #C13584, #833AB4);
+}
