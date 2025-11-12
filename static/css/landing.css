@@ -35,18 +35,3 @@
     justify-content: center;
     gap: 50px;
 }
-
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-#instagram {
-    background-color: #FFDC80;
-}
-
-#instagram:hover {
-    background-image: linear-gradient(to top right, #FFDC80, #F77737, #E1306C, #C13584, #833AB4);
-}
