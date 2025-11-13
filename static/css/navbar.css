@@ -4,6 +4,12 @@
     padding: 10px;
     margin-left: 10px;
     margin-right: auto;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+#acmlogo:hover {
+    transform: scale(1.03);
 }
 
 nav {
@@ -33,6 +39,22 @@ ul {
     width: calc(100% - 210px);
 }
 
+li {
+    font-size: large;
+    border: 1px solid #54b3b3;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+li:hover {
+    background-color: #54b3b3;
+    color: whitesmoke;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition-duration: 5ms;
+    transition-timing-function: linear;
+}
+
 .socials {
     display: flex;
     justify-content: center;
@@ -41,6 +63,14 @@ ul {
     margin-right: 30px;
 }
 
+#github {
+    background-color: #BFFFD1;
+}
+
+#github:hover {
+    background-color: #08872B;
+    color: white;
+}
 
 #instagram {
     background-color: #FFDC80;
@@ -57,5 +87,14 @@ ul {
 
 #discord:hover {
     background-color: #19175C;
+    color: white;
+}
+
+#email {
+    background-color: #fd9234;
+}
+
+#email:hover {
+    background-color: #C76917;
     color: white;
 }
