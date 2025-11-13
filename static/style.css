@@ -11,13 +11,19 @@ h2 {
     font-family: serif;
     text-align: center;
     margin-bottom: 20px;
-    color: #613318;
+    color: #C76917;
+    font-weight: bold;
+    font-size: xx-large;
 }
 
 section {
     margin-top: 100px;
     padding-top: 80px;
     margin-bottom: 50px;
+}
+
+#home {
+    padding-top: 0;
 }
 
 img {
@@ -27,6 +33,7 @@ img {
 
 h3 {
     color: #613318;
+    font-size: x-large;
     text-align: center;
 }
 
