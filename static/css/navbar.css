@@ -27,7 +27,7 @@ nav {
     z-index: 10;
     padding: 0;
     margin: 0;
-    background-color: #6BC9C9;
+    background-color: rgb(131, 206, 226);
 }
 
 ul {
@@ -41,13 +41,13 @@ ul {
 
 li {
     font-size: large;
-    border: 1px solid #54b3b3;
+    border: 1.5px solid #41B4B4;
     padding: 10px 20px;
     border-radius: 20px;
 }
 
 li:hover {
-    background-color: #54b3b3;
+    background-color: #41B4B4;
     color: whitesmoke;
     border: none;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);

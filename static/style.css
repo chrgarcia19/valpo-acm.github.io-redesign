@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #eeeeee;
+    margin-top: 78px;
 }
 
 header {
@@ -17,13 +18,8 @@ h2 {
 }
 
 section {
-    margin-top: 100px;
-    padding-top: 80px;
+    padding-top: 15px;
     margin-bottom: 50px;
-}
-
-#home {
-    padding-top: 0;
 }
 
 img {
@@ -41,4 +37,9 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+html {
+    scroll-padding-top: 85px;
+    scroll-behavior: smooth;
 }
