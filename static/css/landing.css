@@ -3,13 +3,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 100px;
+    padding: 5px 150px;
 }
 
 .mission-statement {
     display: flex;
     justify-items: center;
     text-align: center;
+    font-size: large;
+    line-height: 1.6;
+    text-wrap: balance;
+    letter-spacing: 0.03em;
 }
 
 .activities {
@@ -21,11 +25,29 @@
     
 }
 
+.activity-description {
+    font-size: large;
+    line-height: 1.6;
+    text-wrap: balance;
+    letter-spacing: 0.03em;
+}
+
 .activity-card {
     background-color: aqua;
     padding: 20px;
     border-radius: 25px;
     max-width: 500px;
+}
+
+.activity-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed gray;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .activity-container {

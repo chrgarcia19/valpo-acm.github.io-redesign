@@ -6,83 +6,35 @@
     </div>
     <div class="activities">
         <h3 style="font-weight: bold;">What we do</h3>
-        <p>We bring students together through events that explore computing in all its forms — from coding challenges and hackathons to interdisciplinary talks and community outreach.</p>
+        <p class="activity-description">We bring students together through events that explore computing in all its forms — from coding challenges and hackathons to interdisciplinary talks and community outreach.</p>
         <div class="activity-container">
+            {{ range .Site.Data.activity.activity }}
             <div class="activity-card">
-                <span style="font-weight: bold;">Coding Challenges</span>
+                <div class="activity-header">
+                    <span class="activity-type">{{ .title }}</span>
+                    <i class="{{ .icon }}"></i>
+                </div>
                 <p>
                     <strong>
                         Description: 
                     </strong>
-                    Engage in fun coding contests that test your skills and creativity.
+                    {{ .description }}
                 </p>
                 <p>
                     <strong>
                         Examples:
                     </strong>
-                    Code Golf, Hackathon, Hour of Code
+                    {{ $examples := .examples }}
+                    {{ range $index, $event := $examples }}
+                        {{ if lt (add $index 1) (len $examples) }}
+                            {{ .eventName }},
+                        {{ else }}
+                            {{ .eventName }}
+                        {{ end }}
+                    {{ end }}
                 </p>
             </div>
-            <div class="activity-card">
-                <span style="font-weight: bold;">Professional Development</span>
-                <p>
-                    <strong>
-                        Description: 
-                    </strong>
-                    Enhance your professional skills and build your profile through talks and workshops.
-                </p>
-                <p>
-                    <strong>
-                        Examples:
-                    </strong>
-                    Grad School Night, Resume Night, Coding Interview Night, Job/Internship Night
-                </p>
-            </div>
-            <div class="activity-card">
-                <span style="font-weight: bold;">Computing Discussions</span>
-                <p>
-                    <strong>
-                        Description: 
-                    </strong>
-                    Explore computing technologies through interactive discussions and talks.
-                </p>
-                <p>
-                    <strong>
-                        Examples:
-                    </strong>
-                    Linux Night, Scripting Showcase, Blockchain Night, AI Night
-                </p>
-            </div>
-            <div class="activity-card">
-                <span style="font-weight: bold;">Interdisciplinary Talks</span>
-                <p>
-                    <strong>
-                        Description: 
-                    </strong>
-                    Discover how computing intersects with other fields through talks by campus professors.
-                </p>
-                <p>
-                    <strong>
-                        Examples:
-                    </strong>
-                    Solar Energy and Computing, AI Generated Music & the Future of Creativity, Exploring LLMs
-                </p>
-            </div>
-            <div class="activity-card">
-                <span style="font-weight: bold;">Community Outreach</span>
-                <p>
-                    <strong>
-                        Description: 
-                    </strong>
-                    Engage the community and share your love of computing through hands-on activities.
-                </p>
-                <p>
-                    <strong>
-                        Examples:
-                    </strong>
-                    Valpo Robotics Maker Faire, Student Involvement Fair
-                </p>
-            </div>
+            {{ end }}
         </div>
     </div>
 </section>

@@ -1,0 +1,90 @@
+{
+    "activity": [
+        {
+            "title": "Coding Challenges",
+            "icon": "bi bi-file-code-fill",
+            "description": "Engage in fun coding contests that test your skills and creativity.",
+            "examples": [
+                {
+                    "eventName": "Code Golf"
+                },
+                {
+                    "eventName": "Hackathon"
+                },
+                {
+                    "eventName": "Hour of Code"
+                }
+            ]
+        },
+        {
+            "title": "Professional Development",
+            "icon": "bi bi-mortarboard-fill",
+            "description": "Enhance your professional skills and build your profile through talks and workshops.",
+            "examples": [
+                {
+                    "eventName": "Grad School Night"
+                },
+                {
+                    "eventName": "Resume Night"
+                },
+                {
+                    "eventName": "Coding Interview Night"
+                },
+                {
+                    "eventName": "Job/Internship Night"
+                }
+            ]
+        },
+        {
+            "title": "Computing Discussions",
+            "icon": "bi bi-chat-left-dots-fill",
+            "description": "Explore computing technologies through interactive discussions and talks.",
+            "examples": [
+                {
+                    "eventName": "Linux Night"
+                },
+                {
+                    "eventName": "Scripting Showcase"
+                },
+                {
+                    "eventName": "Blockchain Night"
+                },
+                {
+                    "eventName": "AI Night"
+                }
+            ]
+        },
+        {
+            "title": "Interdisciplinary Talks",
+            "icon": "bi bi-easel3-fill",
+            "description": "Discover how computing intersects with other fields through talks by campus professors.",
+            "examples": [
+                {
+                    "eventName": "Solar Energy and Computing"
+                },
+                {
+                    "eventName": "AI Generated Music & the Future of Creativity"
+                },
+                {
+                    "eventName": "Exploring LLMs"
+                }
+            ]
+        },
+        {
+            "title": "Community Outreach",
+            "icon": "bi bi-people-fill",
+            "description": "Engage the community and share your love of computing through hands-on activities.",
+            "examples": [
+                {
+                    "eventName": "Valpo Robotics Maker Faire"
+                },
+                {
+                    "eventName": "Student Involvement Fair"
+                },
+                {
+                    "eventName": "Haunted Science Lab"
+                }
+            ]
+        }
+    ]
+}
