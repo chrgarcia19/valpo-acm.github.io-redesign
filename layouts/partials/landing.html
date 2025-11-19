@@ -12,17 +12,17 @@
             <div class="activity-card">
                 <div class="activity-header">
                     <span>{{ .title }}</span>
-                    <i class="{{ .icon }}"></i>
+                    <i class="{{ .icon }}" style="font-size: x-large;"></i>
                 </div>
                 <p>
-                    <strong>
+                    <strong style="font-style: italic;">
                         Description: 
                     </strong>
                     {{ .description }}
                 </p>
                 <p>
-                    <strong>
-                        Examples:
+                    <strong style="font-style: italic;">
+                        Events:
                     </strong>
                     {{ $examples := .examples }}
                     {{ range $index, $event := $examples }}

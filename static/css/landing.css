@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px 100px;
+    padding: 25px 50px;
     
 }
 
@@ -33,10 +33,17 @@
 }
 
 .activity-card {
-    background-color: aqua;
+    background-color: rgb(255, 227, 0);
     padding: 20px;
     border-radius: 25px;
     max-width: 500px;
+    transition: ease-in-out;
+    transition-duration: 5ms;
+}
+
+.activity-card:hover {
+    background-color: rgb(255, 214, 0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .activity-header {
@@ -45,7 +52,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 5px;
-    border-bottom: 2px dashed gray;
+    border-bottom: 2px dashed black;
     font-weight: bold;
     font-size: larger;
 }
