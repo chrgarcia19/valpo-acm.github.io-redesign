@@ -1,5 +1,5 @@
 <div class="eboard-card" id="eboard-{{ .position | urlize }}">
-    <div class="photos">
+    <div class="photo">
         <img id="eboard-photo" src="eboard/{{ .name | urlize }}.webp" alt="Profile photo of {{ .name }}"/>
     </div>
     <div class="info">
@@ -13,24 +13,23 @@
         </h3>
 
         {{ if gt (len .major) 0 }}
-            <p>Major{{ if gt (len .major) 1 }}s{{ end }}: {{ delimit .major " & " }}</p>
+            <p style="padding: 0; margin: 0;">Major{{ if gt (len .major) 1 }}s{{ end }}: {{ delimit .major " & " }}</p>
         {{ end }}
-
-        <div class="social-links">
-            {{ if .git }}
-            <a target="_blank" href="{{ .git }}">
-                <button id="github">
-                    <i class="bi bi-github"></i>
-                </button>
-            </a>
-            {{ end }}
-            {{ if .linkedin }}
-            <a target="_blank" href="{{ .linkedin }}">
-                <button id="linkedin">
-                    <i class="bi bi-linkedin"></i>
-                </button>
-            </a>
-            {{ end }}
-        </div>
+    </div>
+    <div class="social-links">
+        {{ if .git }}
+        <a target="_blank" href="{{ .git }}">
+            <button id="github">
+                <i class="bi bi-github"></i>
+            </button>
+        </a>
+        {{ end }}
+        {{ if .linkedin }}
+        <a target="_blank" href="{{ .linkedin }}">
+            <button id="linkedin">
+                <i class="bi bi-linkedin"></i>
+            </button>
+        </a>
+        {{ end }}
     </div>
 </div>
