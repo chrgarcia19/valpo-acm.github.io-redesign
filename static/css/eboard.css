@@ -22,9 +22,13 @@
     width: 100%;
     max-width: 300px;
     border-radius: 15px;
-    background-color: rgb(131, 206, 226);
+    background-color: #DAD9D6;
     padding: 10px;
     min-height: max-content;
+}
+
+.eboard-card:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .name {
@@ -87,11 +91,11 @@ button {
 }
 
 .personal#github {
-    background-color: #d0d7de;
+    background-color: #BFFFD1;
 }
 
 .personal#github:hover {
-    background-color: #8c959f;
+    background-color: #5FED83;
     color: black;
 }
 
