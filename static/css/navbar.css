@@ -61,40 +61,14 @@ li:hover {
     align-items: center;
     gap: 10px;
     margin-right: 30px;
+    transition: background-color 0.2s ease;
 }
 
-#github {
-    background-color: #BFFFD1;
-}
-
-#github:hover {
-    background-color: #08872B;
+.org-social {
+    background-color: rgb(9, 53, 122);
     color: white;
 }
 
-#instagram {
-    background-color: #FFDC80;
-}
-
-#instagram:hover {
-    background-image: linear-gradient(to top right, #FFDC80, #F77737, #E1306C, #C13584, #833AB4);
-    color: white;
-}
-
-#discord {
-    background-color: #5865F2;
-}
-
-#discord:hover {
-    background-color: #19175C;
-    color: white;
-}
-
-#email {
-    background-color: #fd9234;
-}
-
-#email:hover {
-    background-color: #C76917;
-    color: white;
+.org-social:hover {
+    background-color: rgb(1, 130, 172);
 }
