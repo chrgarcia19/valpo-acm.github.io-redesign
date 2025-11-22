@@ -109,26 +109,6 @@ button {
     color: black;
 }
 
-#materials {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(182, 180, 180);
-}
-
-#materials:hover {
-    background-color: rgb(139, 138, 138);
-}
-
-#calendar {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(182, 180, 180);
-}
-
-#calendar:hover {
-    background-color: rgb(139, 138, 138);
-}
-
 .social-links {
     display: flex;
     flex-direction: row;

@@ -22,15 +22,27 @@
     {{ end }}
             <p class="datetimelocal">
                 <i class="bi bi-calendar2"></i>
-                {{ .date }}
+                {{ if .date }}
+                    {{ .date }}
+                {{ else }}
+                    TBD
+                {{ end }}
             </p>
             <p class="datetimelocal">
                 <i class="bi bi-clock"></i>
-                {{ .time }}
+                {{ if .time }}
+                    {{ .time }}
+                {{ else }}
+                    TBD
+                {{ end }}
             </p>
             <p class="datetimelocal">
                 <i class="bi bi-geo-alt-fill"></i>
-                {{ .location }}
+                {{ if .location }}
+                    {{ .location }}
+                {{ else }}
+                    TBD
+                {{ end }}
             </p>
         </div>
     {{ if isset . "description" }}

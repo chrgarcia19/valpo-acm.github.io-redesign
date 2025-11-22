@@ -1,6 +1,6 @@
 .event-card {
     display: flex;
-    background-color: rgb(150, 172, 170);
+    background-color: #6BC9C9;
     border-radius: 25px;
     border: none;
     text-decoration: none;
@@ -8,6 +8,10 @@
     position: relative;
     width: 600px;
     height: 200px;
+}
+
+.event-card:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #events {
@@ -111,4 +115,26 @@
     right: 10px;
     top: 10px; 
     text-decoration: underline;
+}
+
+#materials {
+    width: 40px;
+    height: 40px;
+    background-color: #DAD9D6;
+}
+
+#materials:hover {
+    background-color: rgb(161, 161, 159);
+    color: white;
+}
+
+#calendar {
+    width: 40px;
+    height: 40px;
+    background-color: #DAD9D6;
+}
+
+#calendar:hover {
+    background-color: rgb(161, 161, 159);
+    color: white;
 }
