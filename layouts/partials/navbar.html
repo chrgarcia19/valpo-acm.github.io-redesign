@@ -7,7 +7,7 @@
     </a>
 
     <!-- For Desktop -->
-    <ul>
+    <ul class="desktop-menu">
         <a 
             href="#eboard" 
             style="text-decoration: none; color: black;">
@@ -64,8 +64,64 @@
     </div>
 
     <!-- For Mobile -->
-
     <button class="mobile-nav-button">
-        <i class="bi bi-list" style="font-size: 32px; color: #613318;"></i>
+        <i id="menu-icon" class="bi bi-list" style="font-size: 30px; color: #613318;"></i>
     </button>
+    <div class="mobile-menu-container">
+        <ul class="mobile-menu"> 
+            <a 
+                href="#eboard" 
+                style="text-decoration: none; color: black;">
+                <li>
+                    E-Board Members
+                </li>
+                
+            </a>
+            <a 
+                href="#events"
+                style="text-decoration: none; color: black;">
+                <li>
+                    Events
+                </li>
+            </a>
+            <a 
+                href="#projects"
+                style="text-decoration: none; color: black;">
+                <li>
+                    Projects
+                </li>
+            </a>
+            <a 
+                target="_blank"
+                href="constitution.pdf"
+                style="text-decoration: none; color: black;">
+                <li>
+                    Constitution
+                </li>
+            </a>
+            <div class="socials-mobile">
+                <a target="_blank" href="https://github.com/valpo-acm">
+                    <button class="org-social">
+                        <i class="bi bi-github"></i>
+                    </button>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/valpoacm/">
+                    <button class="org-social">
+                        <i class="bi bi-instagram"></i>
+                    </button>
+                </a>
+                <a target="_blank" href="https://discord.gg/ZFAqSbsrzu">
+                    <button class="org-social">
+                        <i class="bi bi-discord"></i>
+                    </button>
+                </a>
+                <a target="_blank" href="mailto:acm@valpo.edu">
+                    <button class="org-social">
+                        <i class="bi bi-envelope-fill"></i>
+                    </button>
+                </a>
+            </div>
+        </ul>
+    </div>
 </nav>
+<script src="navigation.js"></script>
