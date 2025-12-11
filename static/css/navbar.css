@@ -99,18 +99,26 @@
     .mobile-menu-container {
         position: absolute;
         top: 67px;
-        width: 100%;
+        width: calc(100% - 54px);
+        left: 22px;
+        right: 22px;
         display: flex;
+        padding: 10px 0 20px 0;
+        flex-direction: column;
+        justify-self: center;
         justify-content: center;
         align-items: center;
         background-color: rgb(131, 206, 226);
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        padding: 0;
+        gap: 20px;
+        padding: 15px 0;
+        margin: 0;
         list-style: none;
         justify-content: center;
         
@@ -173,7 +181,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 30px;
+        padding-top: 15px;
         transition: background-color 0.2s ease;
     }
 }
