@@ -102,7 +102,7 @@
         width: calc(100% - 54px);
         left: 22px;
         right: 22px;
-        display: flex;
+        display: none;
         padding: 10px 0 20px 0;
         flex-direction: column;
         justify-self: center;
@@ -111,6 +111,18 @@
         background-color: rgb(131, 206, 226);
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
+
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        pointer-events: none;  
+        
+    }
+
+    .mobile-menu-container.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .mobile-menu {
