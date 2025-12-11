@@ -24,7 +24,8 @@
     border-radius: 15px;
     background-color: #DAD9D6;
     padding: 10px;
-    min-height: max-content;
+    min-height: 575px;
+    max-height: max-content;
 }
 
 .eboard-card:hover {
@@ -35,7 +36,6 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    height: 60%;
     padding-top: 20px;
 }
 
@@ -63,13 +63,14 @@
 .roleandname {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .major {
-    padding: 0;
+    padding: 10px 0 0 0;
     margin: 0;
     font-size: large;
+    text-align: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,7 +80,7 @@
 
 @media (max-width: 640px) {
     .eboard-card {
-        max-width: 275px;
+        max-width: 285px;
     }
 
     #eboard-photo {
@@ -90,22 +91,11 @@
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 35%;
-}
-
-button {
-    display: inline-flex;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    align-items: center;
+    row-gap: 5px;
     justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    border: none;
-    transition: background 2ms;
+    align-items: center;
+    padding: 15px 0;
+    height: max-content;
 }
 
 .personal {
@@ -113,8 +103,14 @@ button {
     min-width: fit-content;
     height: 40px;
     border-radius: 25px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    text-decoration: none;
+    color: black;
 }
 
 .personal#github {
@@ -142,7 +138,7 @@ button {
     justify-content: center;
     padding: 5px;
     padding-bottom: 20px;
-    margin: 5px;
-    column-gap: 30px;
-    height: 5%;
+    margin: 0 5px 5px 5px;
+    width: 100%;
+    height: fit-content;
 }

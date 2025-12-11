@@ -23,19 +23,15 @@
     </div>
     <div class="social-links">
         {{ if .git }}
-        <a target="_blank" href="{{ .git }}">
-            <button class="personal" id="github">
-                <i class="bi bi-github"></i>
-                <p style="font-size: 18px;">GitHub</p>
-            </button>
+        <a target="_blank" href="{{ .git }}" class="personal" id="github">
+            <i class="bi bi-github" style="font-size: 24px;"></i>
+            <p style="font-size: 18px;">GitHub</p>
         </a>
         {{ end }}
         {{ if .linkedin }}
-        <a target="_blank" href="{{ .linkedin }}">
-            <button class="personal" id="linkedin">
-                <i class="bi bi-linkedin"></i>
-                <p style="font-size: 18px;">LinkedIn</p>
-            </button>
+        <a target="_blank" href="{{ .linkedin }}"  class="personal" id="linkedin">
+            <i class="bi bi-linkedin" style="font-size: 24px;"></i>
+            <p style="font-size: 18px;">LinkedIn</p>
         </a>
         {{ end }}
     </div>
