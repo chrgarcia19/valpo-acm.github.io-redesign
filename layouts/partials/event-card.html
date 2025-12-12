@@ -1,127 +1,123 @@
 <div class="event-card" id="event-{{ .title | urlize }}">
-    {{ if and .subtitle .title }}
-        <div class="title">
-            
-            <h3 class="event-title" id="{{ .title | urlize }}">
+    <div class="event-header">
+        <div class="event-title">
+            <h3 class="primary-title" id="{{ .title | urlize }}">
                 {{ .index}})
                 <span style="text-decoration: underline;">{{ .title }}</span>
             </h3>
-            <h4 class="event-subtitle" id="{{ .subtitle | urlize }}">
-                {{ .subtitle }}
+            {{ if .guest }}
+            <h4 class="guest" id="{{ .guest | urlize }}">
+                {{ .guest }}
             </h4>
+            {{ end }}
         </div>
-        <div class="event-info has-subtitle">
-    {{ else }}
-        <div class="title">
-            <h3 class="event-title" id="{{ .title | urlize }}">
-                {{ .index}})
-                <span style="text-decoration: underline;">{{ .title }}</span>
-            </h3>
+
+        <div class="event-buttons">
+            {{ if .slides }} 
+                <a target="_blank" href="{{ .slides }}">
+                    <button id="materials">
+                        <i class="bi bi-folder"></i>
+                    </button>
+                </a>
+            {{ end }}
+
+            {{ if and (ne .date "TBD") (ne .time "TBD") (ne .location "TBD") }}
+                <!-- Create an event title variable for the Google Calendar link -->
+                {{ $eventTitle := .title }}
+                {{ if .guest }}
+                    {{ $eventTitle = printf "%s: %s" .title .guest }}
+                {{ end }}
+
+                <!-- Create a dictionary to convert the month to its corresponding number -->
+                {{ $monthMap := dict 
+                    "Jan" "01" "January" "01"
+                    "Feb" "02" "February" "02"
+                    "Mar" "03" "March" "03"
+                    "Apr" "04" "April" "04"
+                    "May" "05" "May" "05"
+                    "Jun" "06" "June" "06"
+                    "Jul" "07" "July" "07"
+                    "Aug" "08" "August" "08"
+                    "Sep" "09" "September" "09"
+                    "Oct" "10" "October" "10"
+                    "Nov" "11" "November" "11"
+                    "Dec" "12" "December" "12"
+                }}
+
+                {{ $year := index (last 1 (split .term " ")) 0 }}
+
+                <!-- Split apart the date to get the Month and Day respectively -->
+                {{ $dateParts := split .date " "}}
+                {{ $month := index $monthMap (index $dateParts 0) }}
+                {{ $day := printf "%02d" (int (index $dateParts 1)) }}
+                
+                <!-- Split the time to get the hours, minutes, and whether its in AM or PM -->
+                {{ $timeParts := split (replace .time ":" " ") " " }}
+                {{ $hour := int (index $timeParts 0) }}
+                {{ $minute := index $timeParts 1 }}
+                {{ $timeOfDay := index $timeParts 2 }}
+
+                <!-- Account for AM and PM when converting from 12 to 24 hour format -->
+                {{ if eq $timeOfDay "PM" }}
+                    {{ if ne $hour 12 }}
+                        {{ $hour = add $hour 12 }}
+                    {{ end }}
+                {{ else }}
+                    {{ if eq $hour 12 }}
+                        {{ $hour = 0 }}
+                    {{ end }}
+                {{ end }}
+
+                <!-- Build our string for Google Calendar -->
+                {{ $datetimeStart := printf "%s%s%sT%d%s00" $year $month $day $hour $minute }}
+                {{ $hour = add $hour 1}}
+                {{ $datetimeEnd := printf "%s%s%sT%d%s00" $year $month $day $hour $minute }}
+
+                {{ $calendarURL := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&location=%s&details=%s&ctz=America/Chicago" 
+                    ($eventTitle | urlquery) 
+                    $datetimeStart 
+                    $datetimeEnd
+                    (.location | urlquery) 
+                    (.description | default "" | urlquery) }}
+
+                <a target="_blank" href="{{ $calendarURL }}">
+                    <button id="calendar">
+                        <i class="bi bi-calendar-plus"></i>
+                    </button>
+                </a>
+            {{ end }}
         </div>
-        <div class="event-info">
-    {{ end }}
-            <p class="datetimelocal">
-                <i class="bi bi-calendar2"></i>
-                {{ if .date }}
-                    {{ .date }}
-                {{ else }}
-                    TBD
-                {{ end }}
-            </p>
-            <p class="datetimelocal">
-                <i class="bi bi-clock"></i>
-                {{ if .time }}
-                    {{ .time }}
-                {{ else }}
-                    TBD
-                {{ end }}
-            </p>
-            <p class="datetimelocal">
-                <i class="bi bi-geo-alt-fill"></i>
-                {{ if .location }}
-                    {{ .location }}
-                {{ else }}
-                    TBD
-                {{ end }}
-            </p>
-        </div>
+    </div>
+    <div class="event-info">
+        <p class="datetimelocal">
+            <i class="bi bi-calendar2"></i>
+            {{ if .date }}
+                {{ .date }}
+            {{ else }}
+                TBD
+            {{ end }}
+        </p>
+        <p class="datetimelocal">
+            <i class="bi bi-clock"></i>
+            {{ if .time }}
+                {{ .time }}
+            {{ else }}
+                TBD
+            {{ end }}
+        </p>
+        <p class="datetimelocal">
+            <i class="bi bi-geo-alt-fill"></i>
+            {{ if .location }}
+                {{ .location }}
+            {{ else }}
+                TBD
+            {{ end }}
+        </p>
+    </div>
     {{ if isset . "description" }}
         <div class="description">
             <p style="font-weight: bold; padding-top: 20px; margin: 0;">Event Description: </p>
             <p style="padding: 5px 5px 5px 0; margin: 0;">{{ .description }}</p>        
         </div>
     {{ end }}
-    <div class="event-buttons">
-        {{ if .slides }} 
-            <a target="_blank" href="{{ .slides }}">
-                <button id="materials">
-                    <i class="bi bi-folder"></i>
-                </button>
-            </a>
-        {{ end }}
-
-        <!-- Create an event title variable for the Google Calendar link -->
-        {{ $eventTitle := .title }}
-        {{ if .subtitle }}
-            {{ $eventTitle = printf "%s: %s" .title .subtitle }}
-        {{ end }}
-
-        <!-- Create a dictionary to convert the month to its corresponding number -->
-        {{ $monthMap := dict 
-            "Jan" "01" "January" "01"
-            "Feb" "02" "February" "02"
-            "Mar" "03" "March" "03"
-            "Apr" "04" "April" "04"
-            "May" "05" "May" "05"
-            "Jun" "06" "June" "06"
-            "Jul" "07" "July" "07"
-            "Aug" "08" "August" "08"
-            "Sep" "09" "September" "09"
-            "Oct" "10" "October" "10"
-            "Nov" "11" "November" "11"
-            "Dec" "12" "December" "12"
-        }}
-
-        {{ $year := index (last 1 (split .term " ")) 0 }}
-
-        <!-- Split apart the date to get the Month and Day respectively -->
-        {{ $dateParts := split .date " "}}
-        {{ $month := index $monthMap (index $dateParts 0) }}
-        {{ $day := printf "%02d" (int (index $dateParts 1)) }}
-        
-        <!-- Split the time to get the hours, minutes, and whether its in AM or PM -->
-        {{ $timeParts := split (replace .time ":" " ") " " }}
-        {{ $hour := int (index $timeParts 0) }}
-        {{ $minute := index $timeParts 1 }}
-        {{ $timeOfDay := index $timeParts 2 }}
-
-        <!-- Account for AM and PM when converting from 12 to 24 hour format -->
-        {{ if eq $timeOfDay "PM" }}
-            {{ if ne $hour 12 }}
-                {{ $hour = add $hour 12 }}
-            {{ end }}
-        {{ else }}
-            {{ if eq $hour 12 }}
-                {{ $hour = 0 }}
-            {{ end }}
-        {{ end }}
-
-        <!-- Build our string for Google Calendar -->
-        {{ $datetimeStart := printf "%s%s%sT%d%s00" $year $month $day $hour $minute }}
-        {{ $hour = add $hour 1}}
-        {{ $datetimeEnd := printf "%s%s%sT%d%s00" $year $month $day $hour $minute }}
-
-        {{ $calendarURL := printf "https://calendar.google.com/calendar/render?action=TEMPLATE&text=%s&dates=%s/%s&location=%s&details=%s&ctz=America/Chicago" 
-            ($eventTitle | urlquery) 
-            $datetimeStart 
-            $datetimeEnd
-            (.location | urlquery) 
-            (.description | default "" | urlquery) }}
-
-        <a target="_blank" href="{{ $calendarURL }}">
-            <button id="calendar">
-                <i class="bi bi-calendar-plus"></i>
-            </button>
-        </a>
-    </div>
 </div>

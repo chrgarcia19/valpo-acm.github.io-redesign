@@ -11,7 +11,7 @@
         },
         {
             "title": "Discussion on Modeling",
-            "subtitle": "Featuring Professor Venstrom",
+            "guest": "Featuring Professor Venstrom",
             "location": "GEM 125",
             "date": "Feb 12",
             "time": "7:00 PM"
@@ -24,14 +24,14 @@
         },
         {
             "title": "Discussion about Bungie and Gaming",
-            "subtitle": "Presented by IEEE, Featuring Drew Simmons",
+            "guest": "Presented by IEEE, Featuring Drew Simmons",
             "location": "GEM 137",
             "date": "Mar 21",
             "time": "7:00 PM"
         },
         {
             "title": "Discussion on Music and AI",
-            "subtitle": "Featuring Professors Caristi & Bognar",
+            "guest": "Featuring Professors Caristi & Bognar",
             "location": "GEM 124",
             "date": "Apr 16",
             "time": "6:00 PM"
@@ -46,6 +46,14 @@
             "title": "Tech Tour",
             "location": "TBD",
             "datetime": "2024-01-01 00:00:00 -0600"
+        },
+        {
+            "title": "Fruitful Voids and Gardens of Forking Paths: Interactive Narratives in Games",
+            "guest": "Featuring Professor Buinicki",
+            "location": "GEM 125",
+            "date": "TBD",
+            "time": "5:00 PM",
+            "description": "Let's discuss similarities and differences between traditional storytelling and game narratives, including the importance of branching storylines and player agency."
         }
     ]
 }
