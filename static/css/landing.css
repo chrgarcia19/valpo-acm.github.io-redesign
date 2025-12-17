@@ -54,6 +54,13 @@
     transition-duration: 5ms;
 }
 
+@media (max-width: 768px) {
+    .activity-card {
+        background-color: rgb(255, 214, 0);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+}
+
 .activity-card:hover {
     background-color: rgb(255, 214, 0);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
