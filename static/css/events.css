@@ -58,6 +58,7 @@
     width: 40px;
     height: 40px;
     background-color: #DAD9D6;
+    color: black;
 }
 
 #materials:hover {
@@ -69,6 +70,7 @@
     width: 40px;
     height: 40px;
     background-color: #DAD9D6;
+    color: black;
 }
 
 #calendar:hover {
