@@ -1,6 +1,6 @@
 <div class="project-card" id="project-{{ .title | urlize }}">
-    <div style="display: flex; align-items: flex-start; justify-content: flex-start;">
-        <img id="project-photo" src="projects/{{ .title | urlize }}.png" alt="Photo of the {{ .name }} project" />
+    <div class="project-photo">
+        <img src="projects/{{ .title | urlize }}.png" alt="Photo of the {{ .name }} project" />
     </div>
     <div class="project-info">
         <h3 class="project-name">
@@ -25,11 +25,9 @@
             {{ .description }}
         </div>
         <div>
-            <a target="_blank" href="{{ .github }}">
-                <button id="github-project">
-                    <i class="bi bi-github"></i>
-                    GitHub
-                </button>
+            <a class="github-project" target="_blank" href="{{ .github }}">
+                <i class="bi bi-github"></i>
+                GitHub
             </a>
         </div>
     </div>
