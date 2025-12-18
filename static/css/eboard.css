@@ -1,18 +1,15 @@
-#card-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-@media (max-width: 640px) {
-    #card-container {
-        grid-template-columns: auto;
+@media (min-width: 641px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
+
 
 .eboard-card {
     display: flex;
@@ -78,16 +75,6 @@
     column-gap: 5px;
 }
 
-@media (max-width: 640px) {
-    .eboard-card {
-        max-width: 285px;
-    }
-
-    #eboard-photo {
-        width: 225px;
-    }
-}
-
 .info {
     display: flex;
     flex-direction: column;
@@ -141,4 +128,84 @@
     margin: 0 5px 5px 5px;
     width: 100%;
     height: fit-content;
+}
+
+@media (max-width: 640px) {
+    .card-container {
+        display: flex;
+        flex-wrap: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 5% 0 5%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        height: fit-content;
+        scrollbar-width: none;  
+        -ms-overflow-style: none;  
+    }
+
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-container::before {
+        content: '';
+        padding-left: 5%;
+    }
+    .card-container::after {
+        content: '';
+        padding-right: 5%;
+    }
+
+    .eboard-card {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0;
+        max-width: 285px;
+        min-height: 400px;
+        max-height: 500px;
+    }
+
+    #eboard-photo {
+        width: 200px;
+    }
+
+    .info {
+        max-height: 130px;
+    }
+
+    .eboard-carousel-wrapper {
+        width: 100%;
+        position: relative;
+    }
+
+    .eboard-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+        padding: 10px 0;
+    }
+
+    .eboard-pagination-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ccc;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .eboard-pagination-dot.active {
+        background-color: black;
+        width: 24px;
+        height: 18px;
+        border-radius: 40%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
 }
