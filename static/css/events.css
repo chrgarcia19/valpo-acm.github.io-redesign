@@ -99,3 +99,15 @@
     padding-bottom: 5px;   
 }
 
+@media (max-width: 425px) {
+    .datetimelocal {
+        column-gap: 4px;
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 575px) {
+    .event-buttons {
+        flex-direction: column;
+    }
+}
