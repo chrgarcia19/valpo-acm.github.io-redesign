@@ -4,7 +4,16 @@
         {{ range .Site.Data.eboard.members }}
         <div class="eboard-card" id="eboard-{{ .position | urlize }}">
             <div class="photo">
-                <img id="eboard-photo" src="eboard/{{ .name | urlize }}.webp" alt="Profile photo of {{ .name }}"/>
+                {{ $name := .name | urlize }}
+                {{ $imgSrc := "" }}
+                {{ if fileExists (printf "static/eboard/%s.webp" $name) }}
+                    {{ $imgSrc = printf "eboard/%s.webp" $name }}
+                {{ else if fileExists (printf "static/eboard/%s.png" $name) }}
+                    {{ $imgSrc = printf "eboard/%s.png" $name }}
+                {{ else }}
+                    {{ $imgSrc = printf "eboard/%s.jpg" $name }}
+                {{ end }}                     
+                <img id="eboard-photo" src="{{ $imgSrc }}" alt="Profile photo of {{ .name }}"/>
             </div>
             <div class="info">
                 <h3 class="roleandname">
