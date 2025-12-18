@@ -2,40 +2,14 @@
     "members": [
         {
             "position": "President",
-            "name": "Christian Garcia",
-            "major": ["Computer Science"],
-            "git": "https://github.com/chrgarcia19",
-            "linkedin": "https://www.linkedin.com/in/chrgarcia19/"
+            "name": "Mason Tulacz",
+            "major": ["Computer Science"]
         },
         {
             "position": "Vice-President",
-            "name": "Spencer Gannon",
-            "major": ["Computer Science", "Mathematics"],
-            "git": "https://github.com/s-gannon"
-        },
-        {
-            "position": "Secretary",
-            "name": "Mason Tulacz",
-            "major": ["Computer Science"],
-            "git": "https://github.com/valkrie935"
-        },
-        {
-            "position": "Treasurer",
-            "name": "Santiago Gutierrez",
-            "major": ["Computer Science"],
-            "git": "https://github.com/santiagoguty"
-        },
-        {
-            "position": "Public Relations Coordinator",
-            "name": "Kurt Brown",
-            "major": ["Computer Science"],
-            "git": "https://github.com/kbro4"
-        },
-        {
-            "position": "Webmaster",
             "name": "Aubrey Kranz",
             "major": ["Computer Science"],
-            "git": "https://github.com/airralin"
+            "git": "https://github.com/AirraJay"
         },
         {
             "position": "Advisor",
