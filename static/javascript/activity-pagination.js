@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!container || !paginationContainer || cards.length === 0) return;
     
     const storageKey = 'activityCarouselScroll';
-    
+    const sessionKey = 'activityCarouselSession';
+
     cards.forEach((card, index) => {
         const dot = document.createElement('span');
         dot.classList.add('pagination-dot');
@@ -56,9 +57,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 150);
     }, { passive: true });
     
+    const isNewSession = !sessionStorage.getItem(sessionKey);
     const savedScroll = localStorage.getItem(storageKey);
     
-    if (savedScroll !== null && savedScroll !== '0') {
+    if (isNewSession){
+        localStorage.removeItem(storageKey);
+        if (cards[0]) {
+            const firstCardCenter = cards[0].offsetLeft - (container.offsetWidth / 2) + (cards[0].offsetWidth / 2);
+            container.scrollLeft = firstCardCenter;
+        }
+        sessionStorage.setItem(sessionKey, 'true');
+        updateActiveDot();
+    } else if (savedScroll !== null && savedScroll !== '0') {
         const targetScroll = parseInt(savedScroll, 10);
         
         requestAnimationFrame(() => {
@@ -68,6 +78,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     } else {
+        if (cards[0]) {
+            const firstCardCenter = cards[0].offsetLeft - (container.offsetWidth / 2) + (cards[0].offsetWidth / 2);
+            container.scrollLeft = firstCardCenter;
+        }
         updateActiveDot();
     }
 });

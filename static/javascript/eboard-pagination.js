@@ -7,15 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const storageKey = 'eboardCarouselScroll';
     const sessionKey = 'eboardCarouselSession';
-
-    // Add debug display
-    const debugDiv = document.createElement('div');
-    debugDiv.style.cssText = 'position: fixed; top: 10px; left: 10px; background: black; color: white; padding: 10px; z-index: 9999; font-size: 14px;';
-    document.body.appendChild(debugDiv);
-    
-    function updateDebug() {
-        debugDiv.textContent = 'scrollLeft: ' + container.scrollLeft;
-    }
     
     cards.forEach((card, index) => {
         const dot = document.createElement('span');
@@ -54,8 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (dots[closestIndex]) {
             dots[closestIndex].classList.add('active');
         }
-
-         updateDebug();
     }
     
     let scrollTimeout;
@@ -95,6 +84,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         updateActiveDot();
     }
-
-     updateDebug();
 });
