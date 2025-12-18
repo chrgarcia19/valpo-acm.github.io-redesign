@@ -19,7 +19,7 @@
                     </button>
                 </a>
             {{ end }}
-
+            
             {{ if and (ne .date "TBD") (ne .time "TBD") (ne .location "TBD") }}
                 <!-- Create an event title variable for the Google Calendar link -->
                 {{ $eventTitle := .title }}
@@ -59,7 +59,7 @@
                 <!-- Account for AM and PM when converting from 12 to 24 hour format -->
                 {{ if eq $timeOfDay "PM" }}
                     {{ if ne $hour 12 }}
-                        {{ $hour = add $hour 12 }}
+                        {{ $hour = add $hour 11 }}
                     {{ end }}
                 {{ else }}
                     {{ if eq $hour 12 }}
@@ -79,11 +79,15 @@
                     (.location | urlquery) 
                     (.description | default "" | urlquery) }}
 
+                {{ $minuteInt := int $minute }}
+                {{ $startTime := time (printf "%s-%s-%sT%02d:%02d:00" $year $month $day $hour $minuteInt) "America/Chicago" }}
+                {{ if $startTime.After now}}
                 <a target="_blank" href="{{ $calendarURL }}">
                     <button id="calendar">
                         <i class="bi bi-calendar-plus"></i>
                     </button>
                 </a>
+                {{ end }}
             {{ end }}
         </div>
     </div>
