@@ -21,7 +21,11 @@
                         {{ .position  }}
                     </div>
                     <div class="name">
-                        {{ .name }}
+                        {{ if eq .position "Advisor" }}
+                            Professor {{ .name }}
+                        {{ else }}
+                            {{ .name }}
+                        {{ end }}
                     </div>
                 </h3>
 

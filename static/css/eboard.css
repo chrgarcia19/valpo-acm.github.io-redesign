@@ -54,7 +54,8 @@
     justify-content: center;
     flex-wrap: wrap;
     font-size: xx-large;
-    text-decoration: underline;
+    border-bottom: 3px solid #C76917;
+    margin-bottom: 5px;
 }
 
 .roleandname {
@@ -83,6 +84,7 @@
     align-items: center;
     padding: 15px 0;
     height: max-content;
+    margin: 0 7.5%;
 }
 
 .personal {
