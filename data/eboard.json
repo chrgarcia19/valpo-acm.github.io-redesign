@@ -3,19 +3,23 @@
         {
             "position": "President",
             "name": "Mason Tulacz",
-            "major": ["Computer Science"]
+            "major": ["Computer Science"],
+            "git": "https://github.com/valkyrie935",
+            "linkedin": "https://www.linkedin.com/in/mason-tulacz-171510252/"
         },
         {
             "position": "Vice-President",
             "name": "Sam Thyen",
             "major": ["Computer Science"],
-            "git": ""
+            "git": "https://github.com/EyeBrawler",
+            "linkedin": "https://www.linkedin.com/in/samuel-thyen/"
         },
         {
             "position": "Advisor",
             "name": "Nick Rosasco",
             "major": [],
-            "git": "https://github.com/nsrosasco"
+            "git": "https://github.com/nsrosasco",
+            "linkedin": "https://www.linkedin.com/in/nicholas-r-8aa83851/"
         }
     ]
 }
