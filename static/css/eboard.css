@@ -22,7 +22,7 @@
     background-color: #DAD9D6;
     padding: 10px;
     min-height: 575px;
-    max-height: max-content;
+    max-height: 650px;
 }
 
 .eboard-card:hover {
@@ -39,6 +39,7 @@
 #eboard-photo {
     width: 250px;
     height: auto;
+    max-height: 350px;
     border: 1px solid black;
 }
 
