@@ -1,0 +1,56 @@
+\documentclass{article}
+\title{How to Modify Activities on the Valpo ACM Website}
+\date{}
+
+\usepackage{minted}
+\usepackage{hyperref}
+
+\begin{document}
+	\maketitle
+	
+	\begin{Large}
+		\section{Why Would activity.json Need Modified?}
+	\end{Large}
+	This is a great question to ask. Well, the sarcastic answer is that it \textit{should not} require any modification. The events included in the landing page were included to encompass the wide array of events that Valpo ACM hosts. This document only exists in the event that an additional event category is added to the events ACM hosts. 
+	
+	\vspace{48pt}
+	\begin{Large}
+		\section{General Formatting}
+	\end{Large}
+	The different activities that are displayed on the Valpo ACM website landing page originates from the \textit{activities.json} file in the GitHub repository. Before considering any changes, let's take a look at the formatting for this file.
+	
+	\begin{minted}[breaklines, breakanywhere, frame=lines, framesep=5mm, linenos=true, tabsize=2]{json}
+		{
+			"activity": [
+				{
+					"title": "Coding Challenges",
+					"icon": "bi bi-file-code-fill",
+					"description": "Engage in fun coding contests that test your skills and creativity.",
+					"examples": [
+						{
+							"eventName": "Code Golf"
+						},
+						{
+							"eventName": "Hackathon"
+						},
+						{
+							"eventName": "Hour of Code"
+						}
+					]
+				}
+			]
+		}
+	\end{minted}
+	
+	\subsection{"title"}
+	The "title" property is more of an overarching theme of the events listed. In the example above, the title "Coding Challenges" concisely but accurately represents the events listed below. 
+	
+	\subsection{"icon"}
+	The "icon" property is used to dynamically set the property based on the title of the activity. To represent "Coding Challenges" well, a code icon is used. \textbf{Please Note: } The Valpo ACM website uses the Bootstrap Icons library for icons. This library can be found \href{https://icons.getbootstrap.com/}{here}.
+	
+	\subsection{"description"}
+	The "description" property is fairly self explanatory. The only thing to note here is to keep the description brief yet engaging and interesting.
+	
+	\subsection{"examples"}
+	The "examples" property  is an array of elements that contains each event name. A good number of events to include for a card is between 2-4 events. 
+\end{document}
