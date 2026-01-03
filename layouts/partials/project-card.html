@@ -1,6 +1,15 @@
 <div class="project-card" id="project-{{ .title | urlize }}">
     <div class="project-photo">
-        <img src="projects/{{ .title | urlize }}.png" alt="Photo of the {{ .name }} project" />
+        {{ $name := .title | urlize }}
+        {{ $imgSrc := "" }}
+        {{ if fileExists (printf "static/projects/%s.webp" $name) }}
+            {{ $imgSrc = printf "projects/%s.webp" $name }}
+        {{ else if fileExists (printf "static/projects/%s.png" $name) }}
+            {{ $imgSrc = printf "projects/%s.png" $name }}
+        {{ else }}
+            {{ $imgSrc = printf "projects/%s.jpg" $name }}
+        {{ end }}    
+        <img src="{{ $imgSrc }}" alt="Photo of the {{ .name }} project" />
     </div>
     <div class="project-info">
         <h3 class="project-name">
