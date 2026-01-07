@@ -16,16 +16,44 @@
 	\section{How do I Preview the Development Website?}
 	\vspace{12px}
 	
+	\subsection{The Tools and Tech}
+	\vspace{5px}
+
 	To make this as painless as possible for whoever is modifying the website, please use the recommended tools and technologies: 
 	
 	\begin{itemize}
 		\item Some distrobution of Linux (Ubuntu, Arch, Mint, etc.)
-		\item The corresponding hugo package for your chosen distrobution of Linux
+		\item The corresponding Hugo package for your chosen distrobution of Linux
+		\item The Git package for your distrobution of Linux
 		\item A text editor of some sort 
 		\item A GitHub and/or Git account
 	\end{itemize}
 	
-	After getting the proper setup finalized, it is very simple to preview the Valpo ACM website. Go into the working directory of the website, and run 
+	\vspace{10px}
+	\subsection{Putting the GitHub Repository on Your Device}
+	\vspace{5px}
+	
+	Setting up GitHub and Git on your Linux device is extremely important for this process. Since documentation already exists for how to configure this, you can find that \href{https://docs.github.com/en/get-started/git-basics/set-up-git}{here}.
+	
+	After configuring Git, you simply want to go to the GitHub repository for the \href{https://github.com/valpo-acm/valpo-acm.github.io}{Valpo ACM website} in your web browser of choice. Click on the green button, then hit the copy button. Navigate to your terminal (a.k.a command line)  and paste 
+	\begin{verbatim}
+		CTRL + SHIFT + V
+	\end{verbatim}	
+	the link after typing in
+	\begin{verbatim}
+		git clone
+	\end{verbatim}.
+	
+	This should look like this:
+	\begin{verbatim}
+		git clone https://github.com/valpo-acm/valpo-acm.github.io
+	\end{verbatim}
+	
+	\vspace{10px}
+	\subsection{Running the Development Website}
+	\vspace{5px}
+	
+	After getting the proper setup finalized and cloning the repository to your device, it is very simple to preview the Valpo ACM website. Go into the working directory of the website, and run 
 	\begin{verbatim}
 		hugo server
 	\end{verbatim}
