@@ -1,0 +1,386 @@
+\documentclass{article}
+\title{The Valpo ACM Website Master Documentation Pages}
+\date{}
+
+\usepackage{minted}
+\usepackage{hyperref}
+
+\begin{document}
+	\maketitle
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	
+	\section{How do I Preview the Development Website?}
+	\vspace{12px}
+	
+	To make this as painless as possible for whoever is modifying the website, please use the recommended tools and technologies: 
+	
+	\begin{itemize}
+		\item Some distrobution of Linux (Ubuntu, Arch, Mint, etc.)
+		\item The corresponding hugo package for your chosen distrobution of Linux
+		\item A text editor of some sort 
+		\item A GitHub and/or Git account
+	\end{itemize}
+	
+	After getting the proper setup finalized, it is very simple to preview the Valpo ACM website. Go into the working directory of the website, and run 
+	\begin{verbatim}
+		hugo server
+	\end{verbatim}
+	
+	Now either click on the link provided by running the command above or go into your favorite web browser and navigate to 
+	\begin{verbatim}
+		localhost:1313
+	\end{verbatim}
+	to view the development website.
+
+	\vspace{36px}
+	\section{How do I Handle Images on the Website}
+	\vspace{12px}
+	
+	\subsection{Image File Types}
+	\vspace{5px}
+	
+	The Valpo ACM website handles three different types of images:
+	\begin{itemize}
+		\item *.webp
+		\item *.png
+		\item *.jpg
+	\end{itemize}
+	
+	Originally, the website only accepted images of the webp variety. With the website redesign, this was expanded to png and jpg as well for ease of updating the website. With that being said, webp is the most optimized format for websites. If possible, use images in the webp format. The good news, it is very easy to convert an image to a webp on the Linux setup mentioned earlier.
+	
+	\vspace{5px}
+	\subsubsection{How to Convert an Image into .webp}
+	\vspace{2px}
+	
+	Install the Linux package \textbf{cwebp} for your Linux distribution of choice. From there, navigate to the directory where the image you want to convert is. In that directory, enter the following command: 
+	\begin{verbatim}
+		cwebp -q 75 input_file.[png/jpg] -o output_file.webp
+	\end{verbatim}
+	
+	Congrats! You now know how to convert an image to a webp. Use this info wisely.
+	
+	\vspace{10px}
+	\subsection{For E-Board Members}
+	\vspace{5px}
+	
+		With an image of your desired file type, place it in the directory
+		\begin{verbatim}
+			static/eboard/
+		\end{verbatim}
+		
+		Make sure the image is named with the following format in mind. \textbf{Make sure it matches the name in eboard.json}
+			
+		\begin{verbatim}
+			firstname-lastname.[webp/jpg/png]	
+		\end{verbatim}
+		
+	\vspace{10px}
+	\subsection{For Projects}
+	\vspace{5px}
+	
+		The instructions for projects bascially mirror those of the eboard members. 
+		The correct directory for project images is:
+		
+		\begin{verbatim}
+			static/projects/	
+		\end{verbatim}
+		
+		Here is the format for projects:
+		\begin{verbatim}
+			project-name.[webp/jpg/png]	
+		\end{verbatim}
+	
+	\vspace{36px}
+	\section{How do I Update Data on the Website?}
+	\vspace{12px}
+	
+	\subsection{How to Modify the E-Board Lineup}
+	\vspace{5px}
+	
+	\subsubsection{Why Would eboard.json Need Modified?}
+	\vspace{2px}
+		This file is extremely important to update. This file contains the data on the Valpo ACM E-Board members. It is vital that this file is up to date and accurate since this is what visitors of the website will see. 
+	
+		This file needs to be modified in accordance to any E-Board changes that happen either during the semester or after a new semester begins. E-Board elections are held on a yearly basis (sometimes in a semester depending on the circumstances). After the results of elections or other changes occur, this file should be modified as soon as possible. 
+	
+		\subsubsection{General Formatting}
+			\begin{minted}[breaklines, breakanywhere, frame=lines, framesep=5mm, linenos=true, tabsize=2]{json}
+				{
+					"members": [
+					{
+						"position": "Vice-President",
+						"name": "Sam Thyen",
+						"major": ["Computer Science"],
+						"git": "https://github.com/EyeBrawler",
+						"linkedin": "https://www.linkedin.com/in/samuel-thyen/"
+					},
+					{
+						"position": "Treasurer",
+						"name": "Max Kotelnikov",
+						"major": ["Computer Science", "Data Science", "Mathematics"]
+					},
+					{
+						"position": "Advisor",
+						"name": "Nick Rosasco",
+						"major": [],
+						"git": "https://github.com/nsrosasco",
+						"linkedin": "https://www.linkedin.com/in/nicholas-r-8aa83851/"
+					}
+					]
+				}
+			\end{minted}
+		
+		\vspace{5px}
+		\subsubsection{"position"}
+		\vspace{2px}
+		
+		The "position" property contains the position of each E-Board member. The potential positions include: 
+		\begin{itemize}
+			\item President
+			\item Vice President
+			\item Secretary
+			\item Treasurer
+			\item Public Relations Coordinator
+			\item Webmaster
+			\item Advisor
+		\end{itemize}
+		
+		\vspace{5px}
+		\subsubsection{"name"}
+			The "name" property is very self explanatory. This value holds the name of an E-Board member. 
+		\vspace{2px}
+		
+		\vspace{5px}
+		\subsubsection{"major"}
+		\vspace{2px}
+			The "major" property is once again clear on what data is held in it. However, this property is an array. In most cases, only one major will be in the array. There are exceptions to this at times. In some cases, an E-Board member has more than one major. A case that always exists is for the organization advisor, who does not have a major since they already have a PhD. Both examples of this are shown in the example above. 
+		
+		\vspace{5px}
+		\subsubsection{"git"}
+		\vspace{2px}
+			The "git" property holds a link for the E-Board member's GitHub link. This property is optional, which means it does not need to be included. Use the example above to see how that looks. 
+		
+		\vspace{5px}
+		\subsubsection{"linkedin"}
+		\vspace{2px}
+			The "linkedin" property contains the link for an E-Board member's LinkedIn page. This property is also optional. The above example shows how that looks. 
+			
+	\vspace{10px}
+	\subsection{How to Modify the Event Lineup}
+	\vspace{5px}
+	
+	\subsubsection{Why Would events.json Need Modified?}
+	\vspace{2px}
+	Out of all the JSON files, this one will be modified the most often. This JSON file contains the data for each event held by Valpo ACM. 
+	
+	\vspace{5px}
+	\subsubsection{General Formatting}
+	\vspace{2px} 
+	Although the formatting for this JSON file is fairly straightforward, there are some fields that require some explanation to accurately populate this file. Let's take a look at each property to understand what each thing does.
+	
+	\begin{minted}[breaklines, breakanywhere, frame=lines, framesep=5mm, linenos=true, tabsize=2]{json}
+		{
+			"term": "Spring 2026",
+			"events": [
+			{
+				"title": "Fruitful Voids and Gardens of Forking Paths: Interactive Narratives in Games",
+				"guest": "Featuring Professor Buinicki",
+				"location": "TBD",
+				"date": "TBD",
+				"time": "TBD",
+				"description": "Let's discuss similarities and differences between traditional storytelling and game narratives, including the importance of branching storylines and player agency."
+			}
+			]
+		}
+	\end{minted}
+	
+	\vspace{5px}
+	\subsubsection{"title"}
+	\vspace{2px}
+	The "title" property is one of the easiest of them all to comprehend. This holds the title of the event. 
+	
+	\vspace{5px}
+	\subsubsection{"guest"}
+	\vspace{2px}
+	The "guest" property is an \textit{optional} value that varies on events. In the example above, there is a guest giving a discussion. In other circumstances, this property can be omitted. A couple cases where you can use this are:
+	\begin{itemize}
+		\item For a Guest Speaker (ex: Featuring ...)
+		\item An event presented by another organization (ex: Presented by ...)
+		\item Another organization co-hosting the event with Valpo ACM (ex: Co-hosted by ...)
+		\item Any combination of these together (ex: Featuring ... presented by ...)
+	\end{itemize}
+	It is important to note that the examples above can use different (and possibly better) words.
+	
+	\vspace{5px}
+	\subsubsection{"location"}
+	\vspace{2px}
+	The "location" property is the location of the event. For the purposes of the website, you can put an abbreviation of the building and room number (ex: Gellersen 125 would be GEM 125) . In cases where the location is not finalized yet, it is acceptable to put "TBD" in this field. Just be sure to modify this property later for visitors of the website.
+	
+	\vspace{5px}
+	\subsubsection{"date"}
+	\vspace{2px}
+	The "date" property contains the month and day an event is held on. This is because there is logic in the backend of the website to assign the year properly based on the term property shown in the example above. It is acceptable to enter the date as "Jan 1" or "January 1" for example. \textbf{Do not enter the date as 1/1 since this will cause issues.} Once again, if a date is not set for the event yet, it is okay to enter "TBD" in this property.
+	
+	\vspace{5px}
+	\subsubsection{"time"}
+	\vspace{2px}
+	The "time" property holds the time the event is held on. An example of proper formatting is "6:00 PM". Do not enter the time any other way as it will break backend logic that powers some features of the website.  
+	
+	\vspace{5px}
+	\subsubsection{"description"}
+	\vspace{2px}
+	The "description" property contains the description of the event. The description can be as lengthy or short as needed for the event. If there is not a description ready, this field can be omitted or left blank. 
+	
+	\vspace{5px}
+	\subsubsection{"slides"}
+	\vspace{2px}
+	The "slides" property contains a link for any resources used during the event that can be accessed following the event. When adding a link, make sure the link is viewable on Google Drive since in most cases the link will be from the Valpo ACM Google Drive folder. 
+	
+	\vspace{10px}
+	\subsection{How to Modify the Projects}
+	\vspace{5px}
+	
+	\subsubsection{Why Would projects.json Need Modified?}
+	\vspace{2px}
+	This file would only require modification for a couple of reasons. One of them is to add new projects that Valpo ACM has worked on. The other is to modify data on an existing entry. Besides those two reasons, this file \textit{should not} be modified very often. 
+	
+	\vspace{5px}
+	\subsubsection{General Formatting} 
+	
+	\begin{minted}[breaklines, breakanywhere, frame=lines, framesep=5mm, linenos=true, tabsize=2]{json}
+		{
+			"projects": [
+			{
+				"title": "Valpo ACM Game",
+				"contributors": [
+				{
+					"name": "Eric Yager"
+				},
+				{
+					"name": "Ethan Hawk"
+				},
+				{
+					"name": "Nathan Harmon"
+				},
+				{
+					"name": "Alex Luke"
+				},
+				{
+					"name": "Spencer Gannon"
+				},
+				{
+					"name": "Matthew Spivey"
+				},
+				{
+					"name": "Jace Nowacki"
+				}
+				],
+				"description": "A simplistic top-down shooter game based on retro games like Space Invaders.",
+				"github": "https://github.com/valpo-acm/valpo-acm-game"
+			}
+			]
+		}
+	\end{minted}
+	
+	\vspace{5px}
+	\subsubsection{"title"}
+	\vspace{2px}
+	This property is the title of the project. This should typically align with the name of the corresponding GitHub repository. 
+	
+	\vspace{5px}
+	\subsubsection{"contributors"}
+	\vspace{2px}
+	This property is an array of entries holding the name of each contributor to the project. This object may be quite large depending on factors in regards to the project. To get a general idea on how it is formatted, consult the example above. 
+	
+	\vspace{5px}
+	\subsubsection{"description"}
+	\vspace{2px}
+	This property is the description of the project. Unlike the description property in \textit{activity.json}, this description property can be lengthy and informative. The example above is an outlier in this sense.
+	
+	\vspace{5px}
+	\subsubsection{"github"}
+	\vspace{2px}
+	This property contains the link to the project's GitHub repository. That's about it for this property. 
+	
+	\vspace{10px}
+	\subsection{How to Modify the Activities}
+	\vspace{5px}
+	
+	\subsubsection{Why Would activity.json Need Modified?}
+	\vspace{2px}
+	This is a great question to ask. Well, the sarcastic answer is that it \textit{should not} require any modification. The events included in the landing page were included to encompass the wide array of events that Valpo ACM hosts. This document only exists in the circumstance that an additional event category is added to the types of events ACM hosts. 
+	
+	\vspace{5px}
+	\subsubsection{General Formatting}
+	\vspace{2px}
+	The different activities that are displayed on the Valpo ACM website landing page originates from the \textit{activities.json} file in the GitHub repository. Before considering any changes, let's take a look at the formatting for this file.
+	
+	\begin{minted}[breaklines, breakanywhere, frame=lines, framesep=5mm, linenos=true, tabsize=2]{json}
+		{
+			"activity": [
+			{
+				"title": "Coding Challenges",
+				"icon": "bi bi-file-code-fill",
+				"description": "Engage in fun coding contests that test your skills and creativity.",
+				"examples": [
+				{
+					"eventName": "Code Golf"
+				},
+				{
+					"eventName": "Hackathon"
+				},
+				{
+					"eventName": "Hour of Code"
+				}
+				]
+			}
+			]
+		}
+	\end{minted}
+	
+	\subsubsection{"title"}
+	\vspace{2px}
+	The "title" property is more of an overarching theme of the events listed. In the example above, the title "Coding Challenges" concisely but accurately represents the events listed below. 
+	
+	\vspace{5px}
+	\subsubsection{"icon"}
+	\vspace{2px}
+	The "icon" property is used to dynamically set the property based on the title of the activity. To represent "Coding Challenges" well, a code icon is used. \textbf{Please Note: } The Valpo ACM website uses the Bootstrap Icons library for icons. This library can be found \href{https://icons.getbootstrap.com/}{here}.
+	
+	\vspace{5px}
+	\subsubsection{"description"}
+	\vspace{2px}
+	The "description" property is fairly self explanatory. The only thing to note here is to keep the description brief yet engaging and interesting.
+	
+	\vspace{5px}
+	\subsubsection{"examples"}
+	\vspace{2px}
+	The "examples" property  is an array of elements that contains each event name. A good number of events to include for a card is between 2-4 events. 
+	
+	\vspace{10px}
+	\subsection{How to Update the Constitution}
+	\vspace{5px}
+	
+	The constitution is simple to update in regards to the website. However, before considering updating the constitution on the website, be sure to go through the proper process to amend the Valpo ACM constitution. Once that process is complete, modify the constitution with the amendments. Following this, convert the constitution into a PDF file. With the PDF file created. simply replace 
+		\begin{verbatim}
+			static/constitution.pdf
+		\end{verbatim}
+	with the updated copy. 
+	
+	\vspace{36px}
+	\section{How do I Publish a Website Revision}
+	\vspace{12px}
+	
+	Now, you've made the changes to the Valpo ACM website. But how do you publish them to the website? Well, the answer to that is quite simple. All you have to do is commit the changes to the
+	 \begin{verbatim}
+		master
+	\end{verbatim}
+	branch in the valpo-acm.github.io GitHub repository. 
+	
+	After committing the changes, a GitHub Action will automatically run Hugo to generate and deploy the website for everyone to see. 
+	
+\end{document}
